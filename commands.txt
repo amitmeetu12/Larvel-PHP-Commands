@@ -1,0 +1,50 @@
+Install Composer, run the following script in your terminal:
+# curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+Install the Laravel CLI globally, run the following Composer command:
+# composer global require "laravel/installer"
+
+Create a new project with Laravel
+# laravel new <PROJECT-NAME>
+
+Clear laravel cache
+# php artisan cache:clear
+
+Start PHP server on port 8000
+# cd <PROJECT-NAME> 
+# php artisan serve
+
+Restart Apache web server on ubuntu
+# /etc/init.d/apache2 restart
+
+Install Laravel Passport
+# composer require laravel/passport
+
+Create a controller
+# php artisan make:controller NameController
+
+Create a model
+# php artisan make:model <ModelName> -mr
+
+
+Create migrations using following command
+# php artisan make:migration create_<TableName>_table
+
+To execute the migrations and write to the database:
+# php artisan migrate
+
+Make Database Seeders (Will automatically insert dummy data into database) 
+# php artisan make:seeder <TableName>Seeder
+e.g: php artisan make:seeder UsersTableSeeder
+
+Run database seeders (After updating database/DatabaseSeeder.php file)
+# php artisan db:seed (This will update the database with dummy data)
+
+Run the passport installation (create keys for securing application)
+# php artisan passport:install
+
+Test the application locally
+# php artisan serve
+
+To check full route list
+# php artisan route:list
